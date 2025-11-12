@@ -1,0 +1,35 @@
+<div class="timeline-wrapper">
+  <h1 class="title">Nuestra Emocionante Historia 💞</h1>
+
+  <section class="timeline-body">
+    <div class="timeline-line"></div>
+
+    <div *ngFor="let m of memories; let i = index"
+         class="timeline-item"
+         [class.left]="i % 2 === 0"
+         [class.right]="i % 2 !== 0">
+
+      <div class="content" [class.visible]="m.visible">
+        <div class="date">{{ m.date | date:'longDate' }}</div>
+        <h2>{{ m.title }}</h2>
+
+        <div class="photo" *ngIf="m.photo">
+          <img
+                [src]="m.photo"
+                alt="{{ m.title }}"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 768px) 92vw, 480px"
+            />
+
+        </div>
+        <p>{{ m.shortText }}</p>
+        <div class="emoji" *ngIf="!m.photo">{{ m.emoji }}</div>
+        <div class="long-text">
+         <p>{{ m.longText }}</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

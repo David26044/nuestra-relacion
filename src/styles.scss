@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --bg-1:#FFF8F2;          /* crema cálido */
+  --bg-2:#FFE8E8;          /* rosa pálido */
+  --bg-3:#FFF3C4;          /* mantequilla */
+  --ink:#2D2A32;           /* texto principal */
+  --ink-soft:#6B6470;      /* texto suave */
+  --accent:#FF7A90;        /* rosa coral */
+  --accent-2:#7AA7FF;      /* azul pastel */
+  --card:#FFFFFFEE;        /* carta sutil translúcida */
+  --shadow:0 10px 30px rgba(0,0,0,.08);
+  --radius:20px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #fffaf7 0%, transparent 60%),
+    radial-gradient(1000px 500px at 90% 10%, #ffeef2 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg-1) 0%, #fff 100%);
+}
