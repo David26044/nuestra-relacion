@@ -8,13 +8,15 @@
       <div class="scroll-icon">↓</div>
     </div>
   </header>
+
   @if (isBrowser) {
-  <app-music-player></app-music-player>
-}
+    <app-music-player></app-music-player>
+  }
+
   <section class="timeline-container">
     <div class="center-line"></div>
 
-    <div *ngFor="let m of memories; let i = index" 
+    <div *ngFor="let m of memories; let i = index"
          class="timeline-row"
          [class.left-row]="i % 2 === 0"
          [class.right-row]="i % 2 !== 0"
@@ -23,7 +25,7 @@
       <div class="dot"></div>
 
       <div class="card" (click)="toggleExpand(i)" [class.expanded]="expanded[i]">
-        
+
         <div class="card-header">
           <span class="date">{{ m.date | date:'longDate' : '' : 'es-CO' }}</span>
           <span class="emoji" *ngIf="m.emoji && !m.photo">{{ m.emoji }}</span>
@@ -54,10 +56,105 @@
     </div>
   </section>
 
+<!-- ✅ NUEVA SECCIÓN: RECUERDOS SIN FOTOS -->
+  <section class="extra-section">
+    <div class="paper-sheet">
+      <h2 class="extra-title">Los recuerdos que no tienen fotos</h2>
+
+      <div class="extra-text">
+        <p>
+          Quise seguir escribiendo esta historia con más recuerdos, con fechas, con momentos puntuales.
+Pero la verdad es que ya no tengo fotos, y sin ellas se me hace difícil seguir.
+        </p>
+
+        <p>
+          No porque no recuerde lo que vivimos,
+sino porque ponerme a reconstruir todo ahora mismo me cansa.
+Me agota volver a pensar en cada día bonito, en cada plan, en cada instante que fue real.
+        </p>
+
+        <p>
+          Hubo muchos momentos que no quedaron guardados en una imagen:
+días normales, rutinas, abrazos largos, silencios tranquilos,
+cosas simples que no se planean y que no se fotografían,
+pero que fueron parte de nuestra vida juntos.
+        </p>
+
+        <p>
+          No siento que deba explicarlos uno por uno para que tengan valor.
+Pasaron, se vivieron, fueron importantes.
+Y eso basta.
+        </p>
+
+        <p>
+          Esta parte queda así, incompleta,
+no por falta de amor,
+sino porque hoy prefiero descansar
+y dejar que esos recuerdos se queden donde están.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ NUEVA SECCIÓN: LO QUE NO TE DIGO -->
+  <section class="extra-section">
+    <div class="paper-sheet">
+      <h2 class="extra-title">Lo que no te digo</h2>
+
+      <div class="extra-text">
+        <p>
+          Hay muchas cosas que no te digo.
+No porque no las sienta,
+sino porque no quiero que el amor se vuelva presión
+ni que mis emociones se conviertan en una carga para ti.
+        </p>
+
+        <p>
+          No te digo que te amo,
+aunque lo sienta todavía.
+No te digo que te extraño,
+aunque haya días en los que tu ausencia se me siente en el cuerpo.
+No te digo todo lo que daría por verte sonreír
+ni lo mucho que me gustaría hacerte feliz.
+        </p>
+
+        <p>
+          A veces quisiera decirte que movería cielo y tierra por nosotros,
+que me esforzaría por darte una vida bonita, tranquila,
+una vida en la que te sintieras cuidada y elegida.
+Que he pensado en viajar contigo,
+en pedirte matrimonio en otro país,
+en construir algo grande y real a tu lado.
+        </p>
+
+        <p>
+          Pero me callo.
+No porque no lo sienta,
+sino porque sé que decirlo ahora podría pesarte,
+podría confundirte,
+podría hacerte sentir obligada a algo
+para lo que tal vez aún no estás lista.
+        </p>
+
+        <p>
+          Así que guardo todo eso aquí.
+Lo escribo, lo reconozco,
+y lo dejo existir sin exigirte respuesta.
+        </p>
+        <p>
+          Porque amar también es respetar los tiempos del otro,
+aunque eso duela,
+aunque a veces me quede solo
+con todo lo que no digo.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="final-letter">
     <div class="paper-sheet">
       <h2 class="letter-title">El Último Acto de Amor</h2>
-      
+
       <div class="letter-text">
         <p>
           Aquí dejo estas palabras como un gesto de gratitud y despedida.

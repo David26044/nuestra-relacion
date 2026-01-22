@@ -140,4 +140,14 @@ export const MEMORIES: Memory[] = [
   longText: 'Ese día pasamos una tarde hermosa en tu casa. Amo verte, y en esa época disfrutaba muchísimo ir a visitarte, pasar un rato tranquilo juntos, consentirnos, ver pelis, arruncharnos y amarnos sin prisa. Mientras escribo esto desde la distancia, me hace mucha falta esa sensación tan bonita de tenerte cerquita, de abrazarte y de sentir esa paz que solo tú me das. Quiero verte pronto y volver a vivir esos momentos llenos de amor incondicional y mucho cariño. El tiempo pasa muy rápido, pero los recuerdos que tenemos siguen siendo de los más lindos que llevo conmigo.',
   emoji: '🫶',
   photo: 'assets/images/tardelinda.jpeg'
-}];
+},
+  {
+  id: 18,
+  date: '2023-01-01',
+  title: 'Un inicio de año juntos en Fusa 🌄',
+  shortText: 'Unos días simples y hermosos que se quedaron guardados para siempre en mi memoria.',
+  longText: 'A comienzos de enero del 2023 pasamos unos días muy lindos juntos en Fusa. No hay fotos de esos momentos, pero los recuerdo con mucha claridad, como si los tuviera grabados en el corazón. Dormimos en camping en la casa, y para mí eso siempre fue de las cosas que más disfrutaba: dormir contigo, despertar a tu lado, sentirte cerquita y compartir esos espacios tan íntimos y tranquilos.\n\nCelebramos tu cumpleaños allí. Te partimos la torta, nos reímos, compartimos como siempre, de forma sencilla pero muy nuestra. Fueron días en los que me sentí feliz de verdad, disfrutando de tu compañía sin prisas, sin ruido, solo estando juntos. Salimos al centro comercial, caminamos, comimos helado, nos tomamos fotos que hoy solo quedan en mi memoria, pero que recuerdo perfectamente tu sonrisa, tu forma de mirarme, la paz que sentía al estar contigo.\n\nEsos días fueron especiales porque no pasó nada extraordinario, y aun así lo fueron todo. Eran momentos cotidianos, pero llenos de amor, de cercanía y de esa sensación tan bonita de hogar que contigo siempre sentí. Aunque hoy ya no tenga imágenes para mirar, me queda el recuerdo intacto de lo mucho que disfruté estar contigo, de lo bien que se sentía compartir la vida de esa forma tan simple y tan real.',
+  emoji: '🌄'
+}
+
+];

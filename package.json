@@ -2,15 +2,17 @@
   "name": "nuestra-historia",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:nuestra-historia": "node dist/nuestra-historia/server/server.mjs",
-    "deploy": "ng build --configuration production && gh-pages -d dist/nuestra-historia",
-  "deploy:gh": "gh-pages -d dist/nuestra-historia"
-  },
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "serve:ssr:nuestra-historia": "node dist/nuestra-historia/server/server.mjs",
+
+  "build:gh": "ng build --configuration production --base-href /nuestra-relacion/",
+  "deploy": "npm run build:gh && gh-pages -d dist/nuestra-historia/browser",
+  "deploy:gh": "gh-pages -d dist/nuestra-historia/browser"
+},
   "prettier": {
     "printWidth": 100,
     "singleQuote": true,

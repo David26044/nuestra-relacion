@@ -332,3 +332,34 @@ h2 {
   40% {transform: translateY(-10px);}
   60% {transform: translateY(-5px);}
 }
+/* --- 4. SECCIONES EXTRA (TEXTO SIN FOTOS / LO QUE NO TE DIGO) --- */
+.extra-section {
+  background: #f4f1ea; /* mismo tono que tu final-letter para que se vea coherente */
+  padding: 5rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.extra-title {
+  font-family: var(--font-hand);
+  font-size: 2.4rem;
+  color: var(--text-main);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.extra-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.95;
+  color: #444;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Ajuste móvil para que no se vea apretado */
+@media (max-width: 768px) {
+  .extra-title { font-size: 2rem; }
+}
