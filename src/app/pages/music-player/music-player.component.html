@@ -1,0 +1,46 @@
+<div class="player">
+  <audio
+    #audioPlayer
+    [src]="currentSong.url"
+    (ended)="onSongEnded()"
+    preload="auto">
+  </audio>
+
+  <div class="left" *ngIf="!isMinimized">
+    <div class="title">{{ currentSong.title }}</div>
+    <div class="sub">
+      {{ currentSongIndex + 1 }} / {{ playlist.length }}
+    </div>
+  </div>
+
+  <div class="controls">
+    <button (click)="prevSong()">⏮</button>
+
+    <button class="play" (click)="togglePlay()">
+      {{ isPlaying ? '⏸' : '▶' }}
+    </button>
+
+    <button (click)="nextSong()">⏭</button>
+
+    <button (click)="togglePlaylist()">☰</button>
+
+    <button (click)="toggleMinimize()">
+      {{ isMinimized ? '🔼' : '🔽' }}
+    </button>
+  </div>
+</div>
+
+<div class="playlist-panel" *ngIf="showPlaylist && !isMinimized">
+  <div class="playlist-header">
+    <span>Playlist</span>
+    <button (click)="togglePlaylist()">✕</button>
+  </div>
+
+  <button
+    class="song"
+    *ngFor="let s of playlist; let i = index; trackBy: trackByIndex"
+    (click)="selectSong(i)"
+    [class.active]="i === currentSongIndex">
+    {{ i + 1 }}. {{ s.title }}
+  </button>
+</div>

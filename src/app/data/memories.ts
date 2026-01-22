@@ -140,5 +140,4 @@ export const MEMORIES: Memory[] = [
   longText: 'Ese día pasamos una tarde hermosa en tu casa. Amo verte, y en esa época disfrutaba muchísimo ir a visitarte, pasar un rato tranquilo juntos, consentirnos, ver pelis, arruncharnos y amarnos sin prisa. Mientras escribo esto desde la distancia, me hace mucha falta esa sensación tan bonita de tenerte cerquita, de abrazarte y de sentir esa paz que solo tú me das. Quiero verte pronto y volver a vivir esos momentos llenos de amor incondicional y mucho cariño. El tiempo pasa muy rápido, pero los recuerdos que tenemos siguen siendo de los más lindos que llevo conmigo.',
   emoji: '🫶',
   photo: 'assets/images/tardelinda.jpeg'
-}
-];
+}];

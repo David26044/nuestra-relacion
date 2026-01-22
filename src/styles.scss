@@ -1,25 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
-:root{
-  --bg-1:#FFF8F2;          /* crema cálido */
-  --bg-2:#FFE8E8;          /* rosa pálido */
-  --bg-3:#FFF3C4;          /* mantequilla */
-  --ink:#2D2A32;           /* texto principal */
-  --ink-soft:#6B6470;      /* texto suave */
-  --accent:#FF7A90;        /* rosa coral */
-  --accent-2:#7AA7FF;      /* azul pastel */
-  --card:#FFFFFFEE;        /* carta sutil translúcida */
-  --shadow:0 10px 30px rgba(0,0,0,.08);
-  --radius:20px;
+/* --- VARIABLES GLOBALES (Paleta: Nostalgia Elegante) --- */
+:root {
+  --bg-body: #fdfcf8;        /* Blanco hueso / Papel */
+  --bg-card: #ffffff;        /* Blanco puro */
+  
+  /* Colores de acento */
+  --gold: #d4a373;           /* Dorado suave / Arena */
+  --gold-light: #faedcd;     /* Crema */
+  --rose-soft: #eecbc4;      /* Rosa viejo muy suave */
+  
+  /* Textos */
+  --text-main: #4a4a4a;      /* Gris oscuro (no negro puro) */
+  --text-muted: #8b8b8b;     /* Gris medio */
+  --text-accent: #b07d62;    /* Marrón rojizo suave */
+
+  /* Sombras y Bordes */
+  --shadow-sm: 0 4px 20px rgba(0,0,0,0.03);
+  --shadow-md: 0 10px 40px -10px rgba(0,0,0,0.08);
+  --radius: 16px;
+
+  /* Fuentes */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Lato', sans-serif;
+  --font-hand: 'Caveat', cursive;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--ink);
-  background:
-    radial-gradient(1200px 600px at 10% -10%, #fffaf7 0%, transparent 60%),
-    radial-gradient(1000px 500px at 90% 10%, #ffeef2 0%, transparent 60%),
-    linear-gradient(180deg, var(--bg-1) 0%, #fff 100%);
+/* Reset básico */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background-color: var(--bg-body);
+  /* Textura de fondo muy sutil */
+  background-image: radial-gradient(#e8e8e8 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-font-smoothing: antialiased;
 }

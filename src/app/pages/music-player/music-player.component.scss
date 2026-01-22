@@ -1,0 +1,93 @@
+.player {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 14px;
+  border-radius: 16px;
+
+  background: rgba(20, 20, 20, 0.9);
+  color: white;
+}
+
+.left {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.left .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.left .sub {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+
+  button {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .play {
+    font-size: 16px;
+  }
+}
+
+.playlist-panel {
+  position: fixed;
+  bottom: 90px;
+  left: 16px;
+  right: 16px;
+  z-index: 9998;
+
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.playlist-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.song {
+  width: 100%;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.song.active {
+  background: rgba(255, 255, 255, 0.25);
+}

@@ -1,0 +1,78 @@
+<div class="page-wrapper">
+
+  <header class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">3 años y medio de...</span>
+      <h1 class="main-title">Nuestra Historia</h1>
+      <p class="subtitle">Un último recorrido por los momentos que nos hicieron eternos.</p>
+      <div class="scroll-icon">↓</div>
+    </div>
+  </header>
+  @if (isBrowser) {
+  <app-music-player></app-music-player>
+}
+  <section class="timeline-container">
+    <div class="center-line"></div>
+
+    <div *ngFor="let m of memories; let i = index" 
+         class="timeline-row"
+         [class.left-row]="i % 2 === 0"
+         [class.right-row]="i % 2 !== 0"
+         [class.is-visible]="m.visible">
+
+      <div class="dot"></div>
+
+      <div class="card" (click)="toggleExpand(i)" [class.expanded]="expanded[i]">
+        
+        <div class="card-header">
+          <span class="date">{{ m.date | date:'longDate' : '' : 'es-CO' }}</span>
+          <span class="emoji" *ngIf="m.emoji && !m.photo">{{ m.emoji }}</span>
+        </div>
+
+        <h2>{{ m.title }}</h2>
+
+        <div class="photo-wrapper" *ngIf="m.photo">
+          <img [src]="m.photo" [alt]="m.title" loading="lazy">
+        </div>
+
+        <p class="short-text">{{ m.shortText }}</p>
+
+        <div class="expandable-content">
+          <div class="inner-text">
+            <hr class="divider">
+            <p>{{ m.longText }}</p>
+            <div class="emoji-footer" *ngIf="m.emoji && m.photo">{{ m.emoji }}</div>
+          </div>
+        </div>
+
+        <div class="read-more">
+          <span>{{ expanded[i] ? 'Leer menos' : 'Leer historia completa' }}</span>
+          <span class="arrow" [class.rotated]="expanded[i]">›</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="final-letter">
+    <div class="paper-sheet">
+      <h2 class="letter-title">El Último Acto de Amor</h2>
+      
+      <div class="letter-text">
+        <p>
+          Aquí dejo estas palabras como un gesto de gratitud y despedida.
+          No nacen del rencor ni de la tristeza, sino del respeto profundo por todo lo que fuimos y compartimos.
+          Hubo un tiempo en el que caminamos juntos de la mano, con sueños, planes y una forma de querernos que fue real y sincera. Eso no se borra. Vivirá siempre en mi memoria como una etapa valiosa de mi vida, una en la que aprendí a amar, a cuidar y a crecer acompañado.
+          Hoy entiendo que amar también implica aceptar cuando los caminos dejan de coincidir. No porque lo vivido haya sido poco, sino porque fue suficiente para marcar, enseñar y transformar. Esta página no existe para retenerte ni para pedirte que vuelvas, sino para honrar nuestra historia con calma y dejarla descansar donde merece estar: en un recuerdo bonito.
+          Gracias por cada risa, por cada conversación, por cada momento compartido. Gracias por haber sido mi compañera de viaje durante estos años y por todo lo que sembraste en mí. Me quedo con lo bueno, con lo genuino, con lo que fue verdad.
+          Te deseo una vida plena, ligera y feliz. Que encuentres paz en cada decisión que tomes y alegría en el camino que elijas, incluso si ya no es conmigo. Yo también seguiré adelante, llevando conmigo lo aprendido, sin resentimiento y con el corazón más consciente.
+
+          Soltar con respeto, agradecer sin condiciones y despedirme con cariño
+        </p>
+        <br>
+        <p class="signature">Con amor, siempre.</p>
+      </div>
+    </div>
+  </section>
+
+</div>

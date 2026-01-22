@@ -1,0 +1,334 @@
+/* --- CONTENEDOR PRINCIPAL --- */
+.page-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* --- 1. HERO SECTION (PORTADA) --- */
+.hero {
+  height: 90vh; /* Casi toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #fffbf2 0%, #fdfcf8 100%);
+  position: relative;
+
+  .hero-content {
+    padding: 2rem;
+    animation: fadeUp 1.5s ease-out;
+  }
+
+  .eyebrow {
+    font-family: var(--font-hand);
+    font-size: 2rem;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .main-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 8vw, 5.5rem); /* Responsive */
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .scroll-icon {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: var(--gold);
+    animation: bounce 2s infinite;
+  }
+}
+
+/* --- 2. TIMELINE SECTION --- */
+.timeline-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+/* Línea Central */
+.center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold) 10%, var(--gold) 90%, transparent);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Filas (Items) */
+.timeline-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 5rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Distribución Izquierda/Derecha */
+  &.left-row {
+    justify-content: flex-start;
+    padding-right: 50%; /* Deja espacio a la derecha */
+    
+    .card { margin-right: 3rem; margin-left: auto; }
+    .dot { left: auto; right: -6px; } /* Punto pegado a la línea */
+  }
+
+  &.right-row {
+    justify-content: flex-end;
+    padding-left: 50%; /* Deja espacio a la izquierda */
+    
+    .card { margin-left: 3rem; margin-right: auto; }
+    .dot { left: -6px; right: auto; }
+  }
+}
+
+/* Punto decorativo */
+.dot {
+  position: absolute;
+  top: 25px; /* Alineado con el título */
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 0 4px rgba(212, 163, 115, 0.2);
+}
+
+/* --- TARJETA (CARD) --- */
+.card {
+  background: var(--bg-card);
+  width: 90%;
+  max-width: 480px;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.03);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: var(--text-accent);
+}
+
+.emoji { font-size: 1.5rem; }
+
+h2 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin: 0.5rem 0 1rem;
+  color: var(--text-main);
+}
+
+/* Fotos */
+.photo-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  background: #f0f0f0;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+}
+
+.card:hover .photo-wrapper img {
+  transform: scale(1.03);
+}
+
+/* Texto */
+.short-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Animación de Expandir */
+.expandable-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease;
+  
+  .inner-text { overflow: hidden; }
+}
+
+.card.expanded .expandable-content {
+  grid-template-rows: 1fr;
+}
+
+.divider {
+  border: none;
+  border-top: 1px dashed #e0e0e0;
+  margin: 1.5rem 0;
+}
+
+.inner-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+.emoji-footer {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Botón Leer Más */
+.read-more {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+  }
+  
+  .arrow.rotated { transform: rotate(90deg); }
+}
+
+/* --- 3. SECCIÓN FINAL (CARTA) --- */
+.final-letter {
+  background: #f4f1ea; /* Un tono diferente para separar */
+  padding: 6rem 1rem 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.paper-sheet {
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  padding: 4rem;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.06);
+  position: relative;
+  
+  /* Efecto hoja de papel */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(0,0,0,0.05);
+    margin: 10px;
+  }
+}
+
+.letter-title {
+  font-family: var(--font-hand);
+  font-size: 3rem;
+  color: var(--text-main);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.letter-text {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #444;
+}
+
+.signature {
+  text-align: right;
+  font-family: var(--font-hand);
+  font-size: 1.8rem;
+  color: var(--text-accent);
+  margin-top: 3rem;
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+  .hero .main-title { font-size: 3.5rem; }
+  
+  .timeline-container { padding: 2rem 1rem; }
+  
+  /* Mover línea a la izquierda */
+  .center-line { left: 20px; }
+  
+  .timeline-row {
+    margin-bottom: 3rem;
+    
+    /* Resetear alineaciones para móvil */
+    &.left-row, &.right-row {
+      justify-content: flex-start;
+      padding: 0 0 0 50px; /* Espacio para la línea a la izquierda */
+      
+      .card { margin: 0; width: 100%; max-width: 100%; }
+      .dot { left: 14px; right: auto; top: 28px; } /* Ajustar punto */
+    }
+  }
+
+  .paper-sheet { padding: 2rem; }
+}
+
+/* Animaciones Clave */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
