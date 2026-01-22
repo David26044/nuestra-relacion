@@ -17,6 +17,14 @@ export class MusicPlayerComponent implements AfterViewInit {
     { title: 'Chachachá - Josean Log', url: 'assets/music/chachacha.mp3' },
     { title: 'Por el resto de mi vida - Andres Cepeda', url: 'assets/music/por-el-resto-de-mi-vida.mp3' },
     { title: 'Mami - Romeo Santos', url: 'assets/music/mami.mp3' },
+    { title: 'Yellow - Coldplay', url: 'assets/music/yellow.mp3' },
+    { title: 'Cómo te va sin mi - Kris R', url: 'assets/music/como-te-va-sin-mi.mp3'},
+    { title: 'Día tras día - Andres Cepeda', url: 'assets/music/dia-tras-dia.mp3' },
+    { title: 'Coqueta - Grupo firme', url: 'assets/music/coqueta.mp3' },
+    { title: 'Dandelions - Ruth B.', url: 'assets/music/dandelions.mp3' },
+    { title: 'Zundada - Feid', url: 'assets/music/zundada.mp3' },
+    { title: 'New York - Blessd', url: 'assets/music/new-york.mp3' },
+    { title: 'All of me - John Legend', url: 'assets/music/all-of-me.mp3' }
   ];
 
   currentSongIndex = 0;
@@ -34,7 +42,7 @@ export class MusicPlayerComponent implements AfterViewInit {
   ngAfterViewInit() {
     const player = this.audioPlayerRef.nativeElement;
 
-    // ⚡ para que cargue más rápido
+    // para que cargue más rápido
     player.preload = 'auto';
     player.volume = 0.3;
 
