@@ -20,7 +20,7 @@ export class MusicPlayerComponent implements AfterViewInit {
     { title: 'Yellow - Coldplay', url: 'assets/music/yellow.mp3' },
     { title: 'Cómo te va sin mi - Kris R', url: 'assets/music/como-te-va-sin-mi.mp3'},
     { title: 'Día tras día - Andres Cepeda', url: 'assets/music/dia-tras-dia.mp3' },
-    { title: 'Coqueta - Grupo firme', url: 'assets/music/coqueta.mp3' },
+    { title: 'Coqueta - El heredero', url: 'assets/music/coqueta.mp3' },
     { title: 'Dandelions - Ruth B.', url: 'assets/music/dandelions.mp3' },
     { title: 'Zundada - Feid', url: 'assets/music/zundada.mp3' },
     { title: 'New York - Blessd', url: 'assets/music/new-york.mp3' },
