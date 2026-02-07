@@ -10,17 +10,14 @@
   </header>
 
   @if (isBrowser) {
-    <app-music-player></app-music-player>
+  <app-music-player></app-music-player>
   }
 
   <section class="timeline-container">
     <div class="center-line"></div>
 
-    <div *ngFor="let m of memories; let i = index"
-         class="timeline-row"
-         [class.left-row]="i % 2 === 0"
-         [class.right-row]="i % 2 !== 0"
-         [class.is-visible]="m.visible">
+    <div *ngFor="let m of memories; let i = index" class="timeline-row" [class.left-row]="i % 2 === 0"
+      [class.right-row]="i % 2 !== 0" [class.is-visible]="m.visible">
 
       <div class="dot"></div>
 
@@ -56,95 +53,93 @@
     </div>
   </section>
 
-<!-- ✅ NUEVA SECCIÓN: RECUERDOS SIN FOTOS -->
-<!-- ✅ NUEVA SECCIÓN: RECUERDOS SIN FOTOS -->
+  <!-- ✅ NUEVA SECCIÓN: RECUERDOS SIN FOTOS -->
+  <!-- ✅ NUEVA SECCIÓN: RECUERDOS SIN FOTOS -->
   <section class="extra-section">
     <div class="paper-sheet">
       <h2 class="extra-title">Los recuerdos que no tienen fotos</h2>
 
       <div class="extra-text">
-<p>
-  Quise seguir escribiendo esta historia con más recuerdos, con fechas, con momentos puntuales.
-  Pero la verdad es que ya no tengo fotos, y sin ellas se me hace difícil seguir.
-</p>
+        <p>
+          Quise seguir escribiendo esta historia con más recuerdos, con fechas, con momentos puntuales.
+          Pero la verdad es que ya no tengo fotos, y sin ellas se me hace difícil seguir.
+        </p>
 
-<p>
-  No porque no recuerde lo que vivimos,
-  sino porque ponerme a reconstruir todo ahora mismo me cansa.
-  Me agota volver a pensar en cada día bonito, en cada plan,
-  en cada instante que fue real.
-</p>
+        <p>
+          No porque no recuerde lo que vivimos,
+          sino porque ponerme a reconstruir todo ahora mismo me cansa.
+          Me agota volver a pensar en cada día bonito, en cada plan,
+          en cada instante que fue real.
+        </p>
 
-<p>
-  Aun así, hay cosas que recuerdo con mucho amor.
-  Las veces que fuimos a Cafam y a Piscilago,
-  ese último viaje a la Hacienda Nápoles que disfruté tanto,
-  y las cientos de vueltas que le dimos al pueblo hablando sin aburrirnos,
-  como si el tiempo no existiera.
-</p>
+        <p>
+          Aun así, hay cosas que recuerdo con mucho amor.
+          Las veces que fuimos a Cafam y a Piscilago,
+          ese último viaje a la Hacienda Nápoles que disfruté tanto,
+          y las cientos de vueltas que le dimos al pueblo hablando sin aburrirnos,
+          como si el tiempo no existiera.
+        </p>
 
-<p>
-  Recuerdo ir a bailar,
-  las conversaciones interminables hasta la medianoche,
-  riéndonos, amándonos, contándonos todo.
-  Recuerdo dormir contigo,
-  arruncharme, abrazarte,
-  sentir cómo me consentías y cómo yo quería cuidarte a ti.
-</p>
+        <p>
+          Recuerdo ir a bailar,
+          las conversaciones interminables hasta la medianoche,
+          riéndonos, amándonos, contándonos todo.
+          Recuerdo dormir contigo,
+          arruncharme, abrazarte,
+          sentir cómo me consentías y cómo yo quería cuidarte a ti.
+        </p>
 
-<p>
-  También recuerdo ese último tiempo juntos que fue lindo,
-  cuando pasaste mucho tiempo conmigo haciendo vueltas,
-  acompañándonos en lo cotidiano.
-  Salir a comer, pedir comida en tu apartamento,
-  ver películas abrazados,
-  hablar de nuestro futuro, de lo que queríamos,
-  de los sueños que alguna vez imaginamos juntos.
-</p>
+        <p>
+          También recuerdo ese último tiempo juntos que fue lindo,
+          cuando pasaste mucho tiempo conmigo haciendo vueltas,
+          acompañándonos en lo cotidiano.
+          Salir a comer, pedir comida en tu apartamento,
+          ver películas abrazados,
+          hablar de nuestro futuro, de lo que queríamos,
+          de los sueños que alguna vez imaginamos juntos.
+        </p>
 
-<p>
-  Hubo muchos momentos que no quedaron guardados en una imagen:
-  días normales, rutinas, abrazos largos, silencios tranquilos,
-  cosas simples que no se planean y que no se fotografían,
-  pero que fueron parte real de nuestra vida juntos.
-</p>
+        <p>
+          Hubo muchos momentos que no quedaron guardados en una imagen:
+          días normales, rutinas, abrazos largos, silencios tranquilos,
+          cosas simples que no se planean y que no se fotografían,
+          pero que fueron parte real de nuestra vida juntos.
+        </p>
 
-<p>
-  También me quedo con lo último que vivimos.
-  Esa despedida bonita en el aeropuerto,
-  verte ahí, tan hermosa,
-  abrazándonos fuerte,
-  dándonos esos últimos picos y abrazos de despedida.
-</p>
+        <p>
+          También me quedo con lo último que vivimos.
+          Esa despedida bonita en el aeropuerto,
+          verte ahí, tan hermosa,
+          abrazándonos fuerte,
+          dándonos esos últimos picos y abrazos de despedida.
+        </p>
 
-<p>
-  Hoy lo recuerdo con dolor,
-  porque en ese momento me habría gustado darte mil besos más,
-  abrazarte como si el tiempo no existiera,
-  quedarme ahí un poco más.
-  Quién iba a imaginar que después pasarían tantas cosas.
-</p>
+        <p>
+          Hoy lo recuerdo con dolor,
+          porque en ese momento me habría gustado darte mil besos más,
+          abrazarte como si el tiempo no existiera,
+          quedarme ahí un poco más.
+          Quién iba a imaginar que después pasarían tantas cosas.
+        </p>
 
-<p>
-  En todos mis recuerdos estás así:
-  como una mujer hermosa,
-  bonita,
-  especial.
-  Y así es como prefiero guardarte en mi memoria.
-</p>
+        <p>
+          En todos mis recuerdos estás así:
+          como una chachetona hermosa, bonita,
+          especial. Y así es como prefiero guardarte en mi memoria.
+        </p>
 
-<p>
-  No siento que deba explicarlos uno por uno para que tengan valor.
-  Pasaron, se vivieron, fueron importantes.
-  Y eso basta.
-</p>
+        <p>
+          No siento que deba explicarlos uno por uno para que tengan valor.
+          Pasaron, se vivieron, fueron importantes.
+          Y eso basta.
+        </p>
 
-<p>
-  Esta parte queda así, incompleta,
-  no por falta de amor,
-  sino porque hoy prefiero descansar
-  y dejar que esos recuerdos se queden donde están.
-</p>
+        <p>
+          Esta parte queda así, incompleta,
+          no por falta de amor,
+          sino porque hoy prefiero descansar
+          y dejar que esos recuerdos se queden donde están.
+        </p>
       </div>
     </div>
   </section>
@@ -156,48 +151,55 @@
       <div class="extra-text">
         <p>
           Hay muchas cosas que no te digo.
-No porque no las sienta,
-sino porque no quiero que el amor se vuelva presión
-ni que mis emociones se conviertan en una carga para ti.
+          No porque no las sienta,
+          sino porque no quiero que el amor se vuelva presión
+          ni que mis emociones se conviertan en una carga para ti.
         </p>
 
         <p>
           No te digo que te amo,
-aunque lo sienta todavía.
-No te digo que te extraño,
-aunque haya días en los que tu ausencia se me siente en el cuerpo.
-No te digo todo lo que daría por verte sonreír
-ni lo mucho que me gustaría hacerte feliz.
+          aunque lo sienta todavía.
+          No te digo que te extraño,
+          aunque haya días en los que tu ausencia se me siente en el cuerpo.
+          No te digo todo lo que daría por verte sonreír
+          ni lo mucho que me gustaría hacerte feliz.
         </p>
 
         <p>
           A veces quisiera decirte que movería cielo y tierra por nosotros,
-que me esforzaría por darte una vida bonita, tranquila,
-una vida en la que te sintieras cuidada y elegida.
-Que he pensado en viajar contigo,
-en pedirte matrimonio en otro país,
-en construir algo grande y real a tu lado.
+          que me esforzaría por darte una vida bonita, tranquila,
+          una vida en la que te sintieras cuidada y elegida.
+          Que he pensado en viajar contigo,
+          en pedirte matrimonio en otro país,
+          en construir algo grande y real a tu lado.
         </p>
-
         <p>
           Pero me callo.
-No porque no lo sienta,
-sino porque sé que decirlo ahora podría pesarte,
-podría confundirte,
-podría hacerte sentir obligada a algo
-para lo que tal vez aún no estás lista.
+          No porque no lo sienta,
+          sino porque sé que decirlo ahora podría pesarte,
+          podría confundirte,
+          podría hacerte sentir obligada a algo
+          para lo que tal vez aún no estás lista.
         </p>
-
+        <p>
+          Tampoco te digo que muchas veces he pensado en verte.
+          Que me encantaría que vinieras a Colombia y que, si dependiera solo de mí, estaría dispuesto a buscar la
+          forma, a pagar los vuelos, a mover lo que hiciera falta con tal de tenerte cerca.
+        </p>
+        <p>
+          Pero no lo digo porque sé que eso no sería sano si solo nace de mí. Prefiero callarlo y dejar que cualquier
+          decisión si llega, nazca de las ganas reales de los dos.
+        </p>
         <p>
           Así que guardo todo eso aquí.
-Lo escribo, lo reconozco,
-y lo dejo existir sin exigirte respuesta.
+          Lo escribo, lo reconozco,
+          y lo dejo existir sin exigirte respuesta.
         </p>
         <p>
           Porque amar también es respetar los tiempos del otro,
-aunque eso duela,
-aunque a veces me quede solo
-con todo lo que no digo.
+          aunque eso duela,
+          aunque a veces me quede solo
+          con todo lo que no digo.
         </p>
       </div>
     </div>
@@ -211,11 +213,37 @@ con todo lo que no digo.
         <p>
           Aquí dejo estas palabras como un gesto de gratitud y despedida.
           No nacen del rencor ni de la tristeza, sino del respeto profundo por todo lo que fuimos y compartimos.
-          Hubo un tiempo en el que caminamos juntos de la mano, con sueños, planes y una forma de querernos que fue real y sincera. Eso no se borra. Vivirá siempre en mi memoria como una etapa valiosa de mi vida, una en la que aprendí a amar, a cuidar y a crecer acompañado.
-          Hoy entiendo que amar también implica aceptar cuando los caminos dejan de coincidir. No porque lo vivido haya sido poco, sino porque fue suficiente para marcar, enseñar y transformar. Esta página no existe para retenerte ni para pedirte que vuelvas, sino para honrar nuestra historia con calma y dejarla descansar donde merece estar: en un recuerdo bonito.
-          Gracias por cada risa, por cada conversación, por cada momento compartido. Gracias por haber sido mi compañera de viaje durante estos años y por todo lo que sembraste en mí. Me quedo con lo bueno, con lo genuino, con lo que fue verdad.
-          Te deseo una vida plena, ligera y feliz. Que encuentres paz en cada decisión que tomes y alegría en el camino que elijas, incluso si ya no es conmigo. Yo también seguiré adelante, llevando conmigo lo aprendido, sin resentimiento y con el corazón más consciente.
-
+        </p>
+        <p>
+          Hubo un tiempo en el que caminamos juntos de la mano, con sueños, planes y una forma de querernos que fue real
+          y sincera. Eso no se borra. Vivirá siempre en mi memoria como una etapa valiosa de mi vida, una en la que
+          aprendí a amar, a cuidar y a crecer acompañado.
+          </p>
+          <p>
+          Hoy entiendo que amar también implica aceptar cuando los caminos dejan de coincidir. No porque lo vivido haya
+          sido poco, sino porque fue suficiente para marcar, enseñar y transformar.
+          </p>
+          <p>
+          De todo esto aprendí mucho, aunque haya sido tarde. Esta relación me enseñó a amar, a equivocarme y a entender
+          cosas que antes no veía. Me duele que ese aprendizaje no se haya podido vivir mejor contigo, pero aun así fue
+          valioso. Sé que lo que aprendí se queda conmigo y que más adelante quien esté a mi lado recibirá una versión
+          mía más consciente y más cuidadosa.Eso también es parte de lo que esta historia dejó en mí.
+          <p>
+          Esta página no existe para retenerte
+          ni para pedirte que vuelvas, sino para honrar nuestra historia con calma y dejarla descansar donde merece
+          estar: en un recuerdo bonito.
+          </p>
+          <p>
+          Gracias por cada risa, por cada conversación, por cada momento compartido. Gracias por haber sido mi compañera
+          de viaje durante estos años y por todo lo que sembraste en mí. Me quedo con lo bueno, con lo genuino, con lo
+          que fue verdad.
+          </p>
+          <p>
+          Te deseo una vida plena, ligera y feliz. Que encuentres paz en cada decisión que tomes y alegría en el camino
+          que elijas, incluso si ya no es conmigo. Yo también seguiré adelante, llevando conmigo lo aprendido, sin
+          resentimiento y con el corazón más consciente.
+          </p>
+          <p>
           Soltar con respeto, agradecer sin condiciones y despedirme con cariño
         </p>
         <br>

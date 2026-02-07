@@ -37,7 +37,6 @@ export class TimelineComponent implements OnInit {
   }
 
   checkScroll() {
-    // Usamos el isBrowser para evitar errores de SSR (Server Side Rendering)
     if (!this.isBrowser) return;
 
     const windowHeight = window.innerHeight;
@@ -46,7 +45,6 @@ export class TimelineComponent implements OnInit {
     elements.forEach((el, index) => {
       const rect = el.getBoundingClientRect();
       if (rect.top <= windowHeight * 0.85) {
-        // Importante: Asegúrate de que el índice exista
         if (this.memories[index]) {
           this.memories[index].visible = true;
         }
